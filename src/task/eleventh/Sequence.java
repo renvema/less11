@@ -5,7 +5,7 @@ import java.util.*;
 public class Sequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> numbers = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
         int counter = 0;
         while (scanner.hasNextInt()) {
             counter++;
