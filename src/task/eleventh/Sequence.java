@@ -6,14 +6,16 @@ public class Sequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> numbers = new ArrayList<>();
-
+        int counter = 0;
         while (scanner.hasNextInt()) {
-            numbers.add(scanner.nextInt());
+            counter++;
+            if (counter % 2 != 0) {
+                numbers.add(scanner.nextInt());
+            } else {
+                scanner.nextInt();
+            }
         }
-        for (int i = 0; i < numbers.size(); i = i + 2) {
-            numbers.remove(i);
-            i--;
-        }
+
         Collections.reverse(numbers);
         for (Integer number : numbers) {
             System.out.print(number);
